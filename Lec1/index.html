@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <!--
+        by writing rendering here we can debug if there is problem in rendering the react element.
+        if there is a problem then there will be rendering written in the browser and the render function will not be able
+        to override the root.
+    --> 
+    
+    <div id="root">rendering</div>
+    <script>
+        //create a react element-
+        var element = React.createElement("h1",{},"heading 1");
+        //element here is a javascript object
+
+        //creating a root wiz the part of the website in which the react will run-
+        var root = ReactDOM.createRoot(document.getElementById("root"));
+
+        // rendering the react element created in the root(the part of the website where we want to run the react)-
+        root.render(element);
+        //render function here completely overrides whatever there is in the root.
+
+    </script>
+</body>
+</html>
